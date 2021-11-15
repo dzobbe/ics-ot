@@ -1,0 +1,6 @@
+pyshark~=0.4.3
+numpy
+scapy
+pymongo
+python-logstash
+kafka-python

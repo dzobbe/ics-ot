@@ -1,0 +1,22 @@
+"""
+CONFIG file
+
+G.Mellone, C.G.De Vita
+Mar 2021
+"""
+
+VERSION = "1.0"
+EXPORT_RAW = False
+
+DB_HOST = 'mongodb://localhost:27017/'
+
+LOGSTASH_PORT = 6009
+LOGSTASH_HOST = 'localhost'
+
+MODBUS_PORT = '502'
+OMRON_PORT = 9600
+S7_PORT = 102
+LORA_PORT = 40868
+
+TOPIC_KAFKA = 'log'
+BROKER_KAFKA = '127.0.0.1:29092'
