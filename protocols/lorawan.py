@@ -14,7 +14,8 @@ class LoraWan(object):
     def parse(packet):
 
         # Decode LoRaPHY packet with library
-        decoded = LoRa(packet[UDP].load)
+        decoded = LoRa(packet['Raw'].load)
+
         try:
             # Initialize parsing
             parsed_packet = Utils.initializePacket('LoRaWan', packet)
@@ -26,7 +27,7 @@ class LoraWan(object):
             parsed_packet.update(_pkt)
 
             # If enabled, return a RAW value
-            if Utils.export_raw:
+            if EXPORT_RAW:
                 parsed_packet['raw'] = _pkt
 
         except:
