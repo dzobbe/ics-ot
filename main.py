@@ -126,7 +126,7 @@ def capture(pkt):
             logst.info('PACKET', extra=parsed_pkt)
 
             # Send to Kafka
-            kf.send(config.TOPIC_KAFKA, value=parsed_pkt)
+            #kf.send(config.TOPIC_KAFKA, value=parsed_pkt)
 
             # Save in DB
             # mg.insert_one(parsed_pkt)
@@ -187,7 +187,7 @@ if __name__ == '__main__':
     logging.info("[GENERAL] ICS-OT Tools")
     logging.info("[GENERAL] Version " + __version__)
     # mg = initialize_mongo()
-    kf = initialize_kafka()
+    #kf = initialize_kafka()
     logst = initialize_logstash()
     print(get_if_list())
     main()

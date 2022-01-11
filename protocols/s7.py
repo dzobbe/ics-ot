@@ -249,5 +249,5 @@ class S7(object):
 
 
         except Exception as e:
-            print("SCARTATO!")
+            print("Wrong Packet!")
             pass
